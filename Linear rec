@@ -1,0 +1,24 @@
+ALGORITHM linear search/sequential search FOR i = 0 to array length - 1
+IF X = array[i] THEN RETURN i
+ENDIF ENDFOR RETURN -1
+include<stdio.h>
+void main()
+{
+int a[100], key, i, n;
+printf("Enter the number of elements in array\n"); scanf("%d", &n);
+printf("Enter numbers\n"); 
+for ( i= 0 ; i < n ; i++ ) 
+{
+           scanf("%d",&a[i]);
+ }
+printf("Enter the number to search\n"); scanf("%d", &key);
+for ( i= 0 ; i < n ; i++ )
+{
+if ( a[i] == key) /* if required element found */
+{
+printf("%d is present at location %d\n", key, i+1); break;
+}
+}
+if ( i == n )
+printf("%d is not present in array\n", key); 
+}
